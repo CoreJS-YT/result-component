@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+// TODO: Vars to colors
+// *: Primary
+$LightRed: #ff5757;
+$OrangeyYellow: #ffb01f;
+$GreenTeal: #00bd91;
+$CobaltBlue: #1125d4;
+// *: Gradients
+$LightSlateBlueBG: #7857ff;
+$LightRoyalBlueBG: #2e2be9;
+$VioletBlueCC: #4e21ca;
+$PersianBlueCC: #2421ca00;
+// *: Neutral
+$White: #ffffff;
+$PaleBlue: #ebf1ff;
+$LightLavender: #c8c7ff;
+$DarkGrayBlue: #303b5a;
+// *: Font
+$fontHG: 'Hanken Grotesk', sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $White;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
