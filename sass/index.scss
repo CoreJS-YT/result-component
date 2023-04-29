@@ -2,14 +2,18 @@
 // TODO: Vars to colors
 // *: Primary
 $LightRed: #ff5757;
+$LightRed-20: #ff575717;
 $OrangeyYellow: #ffb01f;
+$OrangeyYellow-20: #ffb11f17;
 $GreenTeal: #00bd91;
+$GreenTeal-20: #00bd9117;
 $CobaltBlue: #1125d4;
+$CobaltBlue-20: #1125d417;
 // *: Gradients
-$LightSlateBlueBG: #7857ff;
-$LightRoyalBlueBG: #2e2be9;
-$VioletBlueCC: #4e21ca;
-$PersianBlueCC: #2421ca00;
+$LightSlateBlueBG-GD: #7857ff;
+$LightRoyalBlueBG-GD: #2e2be9;
+$VioletBlueCC-GD: #4e21ca;
+$PersianBlueCC-GD: #2421ca00;
 // *: Neutral
 $White: #ffffff;
 $PaleBlue: #ebf1ff;
@@ -23,16 +27,234 @@ $fontHG: 'Hanken Grotesk', sans-serif;
   padding: 0;
   box-sizing: border-box;
 }
+*::-webkit-scrollbar {
+  display: none;
+}
 
 body {
   background: $White;
+  font-family: $fontHG;
+  font-size: 18px;
+}
+
+.card {
+  width: 375px;
+  overflow: hidden;
+  height: 830px;
+  box-sizing: border-box;
+  &__preview {
+    padding-top: 15px;
+    background: linear-gradient($LightSlateBlueBG-GD, $LightRoyalBlueBG-GD);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    width: 375px;
+    height: 354px;
+
+    &__title {
+      text-align: center;
+      margin: 0 auto 20px;
+      font-size: .93em;
+      font-weight: 500;
+      color: $PaleBlue;
+    }
+    &__result {
+      width: 156px;
+      height: 156px;
+      border-radius: 50%;
+      background: linear-gradient($VioletBlueCC-GD, $PersianBlueCC-GD);
+      margin: 0 auto 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: $PaleBlue;
+      font-size: 2.9em;
+      font-weight: 700;
+      span {
+        font-size: .34em;
+        font-weight: 500;
+        color: $LightLavender;
+      }
+    }
+    &__descs-tittle {
+      text-align: center;
+      color: $PaleBlue;
+      font-size: 1.3em;
+      font-weight: 700;
+      margin: 10px auto 5px;
+    }
+    &__descs {
+      text-align: center;
+      width: 256px;
+      font-size: .87em;
+      font-weight: 500;
+      color: $LightLavender;
+      margin: 10px auto 5px;
+    }
+  }
+  &__desc {
+    width: 375px;
+    height: 447px;
+    margin: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &__title {
+      font-size: .93em;
+      font-weight: 500;
+      color: $DarkGrayBlue;
+      margin: 0 0 20px 0;
+    }
+    &__statics {
+      padding: 0 20px;
+      height: 70px;
+      width: 307px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      gap: 10px;
+      border-radius: 12px;
+      &__stat {
+        text-align: center;
+        font-size: .93em;
+        font-weight: 500;
+        color: $DarkGrayBlue;
+
+        span {
+          color: $LightLavender;
+        }
+      }
+    }
+    .static1 {
+      background-color: $LightRed-20;
+
+      div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 10px;
+
+        p {
+          color: $LightRed;
+        }
+      }
+    }
+    .static2 {
+      background-color: $OrangeyYellow-20;
+
+      div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 10px;
+
+        p {
+          color: $OrangeyYellow;
+        }
+      }
+    }
+    .static3 {
+      background-color: $GreenTeal-20;
+
+      div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 10px;
+
+        p {
+          color: $GreenTeal;
+        }
+      }
+    }
+    .static4 {
+      background-color: $CobaltBlue-20;
+      margin-bottom: 15px;
+
+      div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 30px;
+
+        p {
+          color: $CobaltBlue;
+        }
+      }
+    }
+    &__cont {
+      border-radius: 30px;
+      height: 59px;
+      width: 315px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      background: $DarkGrayBlue;
+      color: $PaleBlue;
+      font-size: 1.2em;
+      transition: all .6s ease;
+
+      &:hover {
+        background: linear-gradient($CobaltBlue, $LightRoyalBlueBG-GD);
+      }
+    }
+  }
 }
 
 .attribution {
+  display: none;
   font-size: 11px;
   text-align: center;
   
   a {
     color: hsl(228, 45%, 44%);
+  }
+}
+
+@media (min-width: 375px) {
+  .card {
+    border-radius: 12px;
+  }
+}
+
+@media (min-width: 600px) {
+  .card {
+    width: 735px;
+    height: 510px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 15px $PaleBlue;
+    &__preview {
+      width: 370px;
+      height: 510px;
+      overflow: hidden;
+      border-radius: 12px;
+      &__title {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 1.3em;
+      }
+      &__result {
+        width: 205px;
+        height: 205px;
+        font-size: 3.4em;
+      }
+      &__descs-tittle {
+        font-size: 1.5em;
+      }
+      &__descs {
+        width: 260px;
+        font-size: 1em;
+      }
+    }
   }
 }
