@@ -8,30 +8,42 @@
   <title>Frontend Mentor | Results summary component</title>
 </head>
 <body>
-
-  Your Result
-  76
-  of 100
-
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
-
-  Reaction
-  80 / 100
-
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-  
+  <main class="card">
+    <section class="card__preview">
+      <h2 class="card__preview__title">Your Result</h2>
+      <div class="card__preview__circle">
+        <p>
+          76 
+          <span>of 100</span>
+        </p>
+      </div>
+      <h3 class="card__preview__desctitle">Great</h3>
+      <p class="card__preview__desc">You scored higher than 65% of the people who have taken these tests.</p>
+    </section>
+    <section class="card__description">
+      <h2 class="card__description__title">Summary</h2>
+      <div class="card__description__result result1">
+        <p class="result1__tipe">Reaction</p>
+        <p class="result1__result">80 <span>/ 100</span></p>
+        <button class="card__description__button"></button>
+      </div>
+      <div class="card__description__result result2">
+        <p class="result2__tipe">Memory</p>
+        <p class="result2__result">92 <span>/ 100</span></p>
+        <button class="card__description__button"></button>
+      </div>
+      <div class="card__description__result result3">
+        <p class="result3__tipe">Verbal</p>
+        <p class="result3__result">61 <span>/ 100</span></p>
+        <button class="card__description__button"></button>
+      </div>
+      <div class="card__description__result result4">
+        <p class="result4__tipe">Visual</p>
+        <p class="result4__result">72 <span>/ 100</span></p>
+        <button class="card__description__button">Continue</button>
+      </div>
+    </section>
+  </main>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a target="_blank" href="https://corejs-yt.github.io">CoreJS Enterprise</a>.
